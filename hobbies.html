@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Maryam-Hobbies</title>
+    <link rel="stylesheet" href="hobbies.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" >
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" >
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="hobbies.html" class="hobbies">Hobbies</a>
+
+        <nav class="navbar">
+            <a href="studium.html">Studium</a>
+            <a href="index.html">Home</a>
+            <a href="newsletter.html">Newsletter</a>
+        </nav>
+    </header>
+
+
+    <div class="kapitel">
+        <ul>
+            <li><a href="#kap1">Allgemein</a></li>
+            <li><a href="#kap2">Fotografien</a></li>
+            <li><a href="#kap3">Kunstwerke</a></li>
+        </ul>
+    </div>
+
+
+    <div class="container">
+        <a id="kap1"><b>Allgemein</b></a>
+        <pre class="hobbies-text">
+Natürlich hat Maryam viele Hobbies. 
+Sehen Sie auf dieser Seite Maryams Leidenschaft für Kunst.
+Klicken Sie sich durch eine Gallerie von Maryams Fotografien und Gemälden.
+        </pre>
+    
+        <a name="kap2"><b>Fotografien</b></a>
+        <p></p>
+        <div class="slider-container">
+            <div class="slider">
+                <div><a href="link1.html"><img src="PXL_20230204_154758245.jpg" alt="How are you feeling?"></a></div>
+                <div><a href="link2.html"><img src="PXL_20230210_120546915.PORTRAIT.jpg" alt="Solembum"></a></div>
+                <div><a href="link3.html"><img src="PXL_20230210_120249287.PORTRAIT.jpg" alt="Solembum"></a></div>
+                <div><a href="link4.html"><img src="Screenshot_20190616-004728_Gallery.jpg" alt="bahnschinen"></a></div>
+            </div>
+        </div>
+
+        <script>
+            //Slick Slider
+            $(document).ready(function () {
+                $('.slider').slick({
+                    //settings/options
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                });
+            });
+        </script>
+
+
+        <a id="kap3"><b>Kunstwerke</b></a>
+        <p></p>
+        <div class="slider-container">
+            <div class="slider">
+                <div><a href="link1.html"><img src="IMG_20230207_171547_877.jpg" alt="Allah SWT, Mohamed SAW"></a></div>
+                <div><a href="link2.html"><img src="IMG-20200221-WA0104.jpeg" alt="Giraffe"></a></div>
+                <div><a href="link3.html"><img src="20200725_165823.jpg" alt="Loyalty never change up"></a></div>
+            </div>
+        </div>
+
+        <script>
+            //Slick Slider
+            $(document).ready(function () {
+                $('.slider').slick({
+                    //settings/options
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                });
+            });
+        </script>
+
+        <div class="uhr">
+            <div class="uhrContent">
+                <div class="clockFace">
+                    <span id="hrs">00</span>
+                    <span>:</span>
+                    <span id="min">00</span>
+                    <span>:</span>
+                    <span id="sec">00</span>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let hrs = document.getElementById("hrs")
+            let min = document.getElementById("min")
+            let sec = document.getElementById("sec")
+
+            setInterval(() => {
+                let currentTime = new Date();
+
+                hrs.innerHTML = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+                min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+                sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+            }, 1000)
+        </script>
+
+
+        <div class="solSys">
+            <div class="sun"></div>
+            <div class="earth">
+                <div class="moon"></div>
+            </div>
+        </div>
+</div>
+</body>
+
+</html>

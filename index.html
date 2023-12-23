@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryam-Startseite</title>
+    <link rel="stylesheet" href="index.css" >
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html" class="home">Home</a>
+
+        <nav class="navbar">
+            <a href="studium.html">Studium</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="newsletter.html">Newsletter</a>
+        </nav>
+    </header>
+
+    <pre class="einleitung">
+Kennen Sie schon Maryam, die Programmierlgende? 
+    </pre>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h4>© Maryam Ibrahim</h4>
+                    <ul>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                        <li><a href="impressum.html">Impressum</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="uhr">
+        <div class="uhrContent">
+            <div class="clockFace">
+                <span id="hrs">00</span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let hrs = document.getElementById("hrs")
+        let min = document.getElementById("min")
+        let sec = document.getElementById("sec")
+
+        setInterval(() => {
+            let currentTime = new Date();
+
+            hrs.innerHTML = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+            min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+            sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+        }, 1000)
+    </script>
+
+   <div class="solSys">
+        <div class="sun"></div>
+        <div class="earth">
+            <div class="moon"></div>
+        </div>
+    </div>
+
+    <script>
+       let earth = document.querySelector(".earth");
+
+function updateEarthRotation() {
+    let currentTime = new Date();
+    let totalMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
+    
+    // Adjust the tilt by subtracting 90 degrees
+    let startingAngle = ((totalMinutes / 720) * 360) - 50; // 720 minutes in 12 hours
+    earth.style.transform = `rotate(${startingAngle}deg)`;
+}
+
+// Initial update
+updateEarthRotation();
+
+// Update every minute to keep the Earth in sync with the current time
+setInterval(updateEarthRotation, 60000);
+    </script>
+
+</body>
+
+</html>

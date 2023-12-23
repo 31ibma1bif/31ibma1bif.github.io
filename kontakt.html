@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Maryam-Hobbies</title>
+    <link rel="stylesheet" href="kontakt.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html" class="home">Home</a>
+
+        <nav class="navbar">
+            <a href="studium.html">Studium</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="newsletter.html">Newsletter</a>
+        </nav>
+    </header>
+
+
+    <div class="kontakt">
+        <ul>
+            <li>Tel: 0711 1312</li>
+            <li>E-Mail: <a href="mailto:31ibma1bif@hft-stuttgart.de">31ibma1bif@hft-stuttgart.de</a></li>
+        </ul>
+    </div>
+
+    <div class="uhr">
+        <div class="uhrContent">
+            <div class="clockFace">
+                <span id="hrs">00</span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let hrs = document.getElementById("hrs")
+        let min = document.getElementById("min")
+        let sec = document.getElementById("sec")
+
+        setInterval(() => {
+            let currentTime = new Date();
+
+            hrs.innerHTML = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+            min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+            sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+        }, 1000)
+    </script>
+
+    <div class="solSys">
+        <div class="sun"></div>
+        <div class="earth">
+            <div class="moon"></div>
+        </div>
+    </div>
+</body>
+
+</html>

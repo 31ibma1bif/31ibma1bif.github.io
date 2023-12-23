@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="impressum.css"
+>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="home">Home</a>
+
+        <nav class="navbar">
+            <a href="studium.html">Studium</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="newsletter.html">Newsletter</a>
+        </nav>
+    </header>
+
+    <div class="adresse">
+        <ul>
+        <li><address>
+            Maryam Ibrahim
+            <p></p>
+            Schellingstraßes 24
+            <p></p>
+            70174 Stuttgart
+            <p></p>
+        </address></li>
+            <li>Background Home, Kontakt, Impressum<a href="https://wallpaperaccess.com/full/1678156.jpg">Mountains Lila</a></li>
+            <li>Background Studium<a href="https://wallpaperbat.com/img/312313-mountains-landscape-minimalism-5k-hd-artist-4k-wallpaper.jpg">Mountains blue</a></li>
+            <li>Background Hobbies<a href="https://wallpaperaccess.com/full/4067186.jpg">Mountains Pink</a></li>
+            <li>Background Newsletter<a href="https://images.unsplash.com/photo-1622819584099-e04ccb14e8a7?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxvJTIwZml8ZW58MHx8MHx8fDA%3D">Mountains red</a></li>
+        </ul>
+    </div>
+
+    <div class="uhr">
+        <div class="uhrContent">
+            <div class="clockFace">
+                <span id="hrs">00</span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let hrs = document.getElementById("hrs")
+        let min = document.getElementById("min")
+        let sec = document.getElementById("sec")
+
+        setInterval(() => {
+            let currentTime = new Date();
+
+            hrs.innerHTML = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+            min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+            sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+        }, 1000)
+    </script>
+
+    <div class="solSys">
+        <div class="sun"></div>
+        <div class="earth">
+            <div class="moon"></div>
+        </div>
+    </div>
+</body>
+
+</html>
